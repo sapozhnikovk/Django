@@ -50,11 +50,16 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+#TEMPLATES_DIR = (
+#    '/home/sapozhnikovk/PycharmProjects/Django/mysite/Templates',
+#)
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/home/sapozhnikovk/PycharmProjects/Django/mysite/Templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

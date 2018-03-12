@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from django.template.loader import get_template
 from django.template import Template, Context
 from django.http import Http404, HttpResponse
 import datetime
@@ -17,8 +18,10 @@ def main_page(request):
 
 def current_datetime(request):
     today = datetime.datetime.today()
-    t = Template("<html><body>Сейчас {{ current_date }}.</body></html>")
-    html = t.render(Context({"current_date": today}))
+    t = get_template('current_datetime.html')
+    #t = Template("<html><body>Сейчас {{ current_date }}.</body></html>")
+    #html = t.render(Context({'current_date': today}))
+    html = t.render({'current_date': today})
     return HttpResponse(html)
 
 
