@@ -1,6 +1,6 @@
-<html>
-<body>
-<title>Дата и время</title>
-<font color='red'>Сейчас {{ current_date }}</font>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Текущее время{% endblock %}
+{% block content %}
+ <font color='red'>Сейчас {{ current_date }}</font></body></p>
+ <font color='blue'>Рандомное число: {{ x }}</font></p>
+{% endblock %}
