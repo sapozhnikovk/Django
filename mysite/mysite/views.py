@@ -9,22 +9,12 @@ import datetime
 
 def hello(request):
     x = u'Hello Word'
-    return HttpResponse(x)
+    return render_to_response('hello.html', locals())
 
 
 def main_page(request):
-    main_html = '''<html><body><a href = "hello">Страница Hello Word</a></p>
-     <a href = "datetime">Страница Дата и время</a></body></html>'''
-    return HttpResponse(main_html)
+    return render_to_response('main.html', locals())
 
-""" Неудобный метод
-def current_datetime(request):
-    today = datetime.datetime.today()
-    t = get_template('current_datetime.html')
-    #t = Template("<html><body>Сейчас {{ current_date }}.</body></html>")
-    #html = t.render(Context({'current_date': today}))
-    html = t.render({'current_date': today})
-    return HttpResponse(html)"""
 def current_datetime(request):
     x = random()
     current_date = datetime.datetime.today()
