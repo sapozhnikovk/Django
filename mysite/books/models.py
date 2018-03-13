@@ -23,3 +23,4 @@ class Book(models.Model):
     author = models.ManyToManyField(Author)
     publisher = models.ForeignKey(Publisher)
     publication_date = models.DateField()
+
