@@ -36,3 +36,14 @@ def hours_ahead(request, offset):
     dt = datetime.datetime.today() + datetime.timedelta(hours=offset)
     # assert False
     return render_to_response('hours_ahead.html', locals())
+
+def display_meta(request):
+    value = request.META.items()
+    value.sort()
+    html = []
+    for k, v in value:
+        html.append((k, v))
+    return render_to_response('meta.html', locals())
+
+        #html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
+    #return HttpResponse('<table>%s</table>' % '\n'.join(html))

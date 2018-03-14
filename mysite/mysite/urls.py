@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^datetime/$', views.current_datetime),
     url(r'^datetime/plus/(\d{1,2})/$', views.hours_ahead),
     url(r'^bootstrap/', views.bootsrap),
+    url(r'^meta/', views.display_meta),
 ]
