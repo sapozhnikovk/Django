@@ -39,11 +39,11 @@ def hours_ahead(request, offset):
 
 def display_meta(request):
     value = request.META.items()
-    value.sort()
-    html = []
-    for k, v in value:
-        html.append((k, v))
+    #value.sort()
+    #html = []
+    #for k, v in value:
+     #   html.append((k, v))
     return render_to_response('meta.html', locals())
 
-        #html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
+    #    html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
     #return HttpResponse('<table>%s</table>' % '\n'.join(html))

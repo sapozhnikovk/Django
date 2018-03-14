@@ -2,7 +2,9 @@
 {% block title %}Старница META{% endblock %}
 {% block content %}
 <table>
-{{ html }}
+    {% for k, v in value %}
+       <tr><td> {{k}} </td><td> {{v}} </td></tr>
+
+    {% endfor %}
 </table>
-{{ value }}
 {% endblock %}
