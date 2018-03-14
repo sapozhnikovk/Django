@@ -6,13 +6,16 @@ from django.http import Http404, HttpResponse
 from random import random
 import datetime
 
+def bootsrap(request):
+    return render_to_response('bootstrap.html', locals())
+
 def hello(request):
     x = u'Hello Word'
+
     f = open('mysite/dump.txt', 'r')
     dump_list = f.read()
     f.close()
     return render_to_response('hello.html', locals())
-
 
 def main_page(request):
     return render_to_response('main.html', locals())

@@ -1,11 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
         "http://www.w3.org/TR/html4/loose.dtd">
+{% load bootstrap3 %}
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
 <html>
 <head>
     <title>{% block title%}{% endblock %}</title>
 </head>
 <body>
-    <input type="button" onclick="history.back();" value="Назад"/>
+<p></p>
+    <left><input type="button" onclick="history.back();" value="Назад" class="btn btn-default" aria-label="Left Align"/>
     <H1>Мой сайт точного времени</H1>
     {% block content %}{% endblock %}
     {% block footer %}

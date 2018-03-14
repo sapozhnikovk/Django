@@ -1,0 +1,13 @@
+{# Load the tag library #}
+{% load bootstrap3 %}
+
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% bootstrap_icon "menu-right" %}
+{% bootstrap_alert "Something went wrong" alert_type='danger' %}
+{% buttons submit='OK' reset="Cancel" %}{% endbuttons %}

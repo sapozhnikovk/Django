@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^$', views.main_page),
     url(r'^datetime/$', views.current_datetime),
     url(r'^datetime/plus/(\d{1,2})/$', views.hours_ahead),
+    url(r'^bootstrap/', views.bootsrap),
 ]

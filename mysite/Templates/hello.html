@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
-{% block title %}Старница Привет мир {% endblock %}
-{% block content %} {{ x }}
-    <p>{{ dump_list }}
+{% block title %}Старница Привет мир
+{% endblock %}
+{% block content %}
+<script>
+setTimeout(function(){
+    location.reload();
+}, 1500);
+</script>
+{{ x }}
+    <p>{{ dump_list | linebreaks }}
 {% endblock %}
