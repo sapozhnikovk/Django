@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 import views
+import books.views
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,6 +25,8 @@ urlpatterns = [
     url(r'^$', views.main_page),
     url(r'^datetime/$', views.current_datetime),
     url(r'^datetime/plus/(\d{1,2})/$', views.hours_ahead),
-    url(r'^bootstrap/', views.bootsrap),
-    url(r'^meta/', views.display_meta),
+    url(r'^bootstrap/$', views.bootsrap),
+    url(r'^meta/$', views.display_meta),
+    url(r'^search-form/$', books.views.search_form),
+    url(r'^search/$',  books.views.search_form),
 ]

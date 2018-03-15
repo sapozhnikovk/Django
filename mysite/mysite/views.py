@@ -39,6 +39,9 @@ def hours_ahead(request, offset):
 
 def display_meta(request):
     value = request.META.items()
+    path = request.path
+    cookies  = request.COOKIES
+
     #value.sort()
     #html = []
     #for k, v in value:

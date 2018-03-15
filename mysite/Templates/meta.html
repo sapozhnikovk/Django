@@ -2,9 +2,10 @@
 {% block title %}Старница META{% endblock %}
 {% block content %}
 <table>
+    <tr><td> Адрес страницы </td><td> {{path}} </td></tr>
+    <tr><td> Cookies </td><td> {{cookies}} </td></tr>
     {% for k, v in value %}
        <tr><td> {{k}} </td><td> {{v}} </td></tr>
-
     {% endfor %}
 </table>
 {% endblock %}
