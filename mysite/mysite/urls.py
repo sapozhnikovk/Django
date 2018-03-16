@@ -27,6 +27,6 @@ urlpatterns = [
     url(r'^datetime/plus/(\d{1,2})/$', views.hours_ahead),
     url(r'^bootstrap/$', views.bootsrap),
     url(r'^meta/$', views.display_meta),
-    url(r'^search-form/$', books.views.search_form),
+   # url(r'^search-form/$', books.views.search_form),
     url(r'^search/$',  books.views.search),
 ]

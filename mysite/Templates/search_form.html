@@ -1,11 +1,24 @@
-<html>
-<head>
-    <title>Поиск</title>
-</head>
-<body>
-    <form action="/search/" method="get">
+{% extends 'base.html' %}
+{% block title %}Поиск{% endblock %}
+{% block content %}
+    <form action="" method="get">
         <input type="text" name="q">
         <input type="submit" value="Найти">
     </form>
-</body>
-</html>
+    {% if error == True %}
+     <p style="color: red;">Введите поисковый запрос.</p>
+    {% endif %}
+    {% if search_result %}
+    <p>Вы искали: <strong>{{ q }}</strong></p>
+        {% if books %}
+            <p>Найдено {{ books|length }} книг{{ books|pluralize }}.</p>
+            <ul>
+            {% for book in books %}
+            <li>{{ book.title }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>Книг, удавлитворяющих заданному критерию, не найдено.</p>
+        {% endif %}
+    {% endif %}
+{% endblock %}
