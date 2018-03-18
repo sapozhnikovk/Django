@@ -3,7 +3,7 @@ from django.template.loader import get_template
 #from django.template import Template, Context
 from django.shortcuts import render_to_response
 from django.http import Http404, HttpResponse
-from random import random
+from random import random, randint
 import datetime
 
 def bootsrap(request):
@@ -11,13 +11,16 @@ def bootsrap(request):
 
 def hello(request):
     x = u'Hello Word'
-
     f = open('mysite/dump.txt', 'r')
     dump_list = f.read()
     f.close()
     return render_to_response('hello.html', locals())
 
 def main_page(request):
+    wordlist = [u'На улице солнце', u'Возможно сегодня среда', u'Вот это тест',
+                u'Это мои тестовые рандомные фразы', u'Я пытаюсь изучить Джанго',
+                u'На улице снег', u'test', u'Рандомный текст', u'Еще бы взять его из интернета']
+    wordlist_rnd = wordlist[randint(0, len(wordlist) - 1)]
     return render_to_response('main.html', locals())
 
 def current_datetime(request):
