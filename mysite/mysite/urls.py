@@ -17,7 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 import views
 import books.views
-
+import game.views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^meta/$', views.display_meta),
    # url(r'^search-form/$', books.views.search_form),
     url(r'^search/$',  books.views.search),
+    url(r'^game/$', game.views.start)
 ]

@@ -1,0 +1,11 @@
+{% extends 'game\base.html' %}
+
+{% block title %}Главаня страница сайта{% endblock %}
+{% block content %}
+<p></p>
+<form action="" style="margin-left: 10px" method="get">
+    <input type="text" name="q">
+    <input type="submit" value="Ответ">
+</form>
+<font color="red" style="margin-left: 10px"> {{ error }} </font>
+{% endblock %}
