@@ -2,10 +2,16 @@
 
 {% block title %}Главаня страница сайта{% endblock %}
 {% block content %}
+<div id = 'content'>
 <p></p>
 <form action="" style="margin-left: 10px" method="get">
     <input type="text" name="q">
     <input type="submit" value="Ответ">
 </form>
+    <p></p>
+{% if img %}
+    <img src="{{ img }}" width=20% height=20% style="margin-left: 10px">
+{% endif %}
 <font color="red" style="margin-left: 10px"> {{ error }} </font>
+</div>
 {% endblock %}
