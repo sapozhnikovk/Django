@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Калькулятор{% endblock %}
+{% block content %}
+<form action="" method="get" >
+    <p>Первое число: <input type="text" name="a" ></p>
+    <p></p>
+<!--
+    <select name="oper" size="1">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="/">/</option>
+    <option value="*">*</option>
+-->
+    <p>Второе число: <input type="text" name="b" ></p>
+<p>Операция<input type="submit" name="oper" value="+">
+        <input type="submit" name="oper" value="-">
+        <input type="submit" name="oper" value="/">
+    <input type="submit" name="oper" value="*"></p>
+    <!--
+        <input type="submit" value="сложить" class="btn btn-default">
+        -->
+    </form>
+{% if c %}
+   <p>Результат: {{ c }} </p>
+{% endif %}
+{% endblock %}
