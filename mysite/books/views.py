@@ -18,7 +18,7 @@ def search(request):
     return HttpResponse(message)
 """
 def search(request):
-    error = False
+ #   error = False
     if 'q' in request.GET:
         q = request.GET['q']
         if not q:

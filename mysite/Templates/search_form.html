@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block title %}Поиск{% endblock %}
 {% block content %}
-    <form action="" method="get">
-        <input type="text" name="q">
-        <input type="submit" value="Найти">
+    <form action="" method="get" >
+        <input type="text" name="q" >
+        <input type="submit" value="Найти" class="btn btn-default">
     </form>
-    {% if error == True %}
+    {% if error %}
      <p style="color: red;">Введите поисковый запрос.</p>
     {% endif %}
     {% if search_result %}

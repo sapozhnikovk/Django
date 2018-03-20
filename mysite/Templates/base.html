@@ -9,13 +9,34 @@
     <title>{% block title%}{% endblock %}</title>
 </head>
 <body>
-
-    <input type="button" onclick="history.back();" value="Назад" class="btn btn-default" aria-label="Left Align"/>
-    <H1>Тестовый сайт на Django</H1>
+<div class="container">
+    <input type="button" onclick="history.back();" value="Назад" class="btn btn-default"
+           aria-label="Left Align" style="margin-top: 5px;"/>
+     <H1>Тестовый сайт на Django</H1>
+    <nav class="navbar navbar-default" role="navigation">
+    <ul class="nav nav-pills">
+    <li>
+    <a href = "/hello">Страница Hello Word</a></p>
+    </li>
+    <li>
+    <a href = "/datetime">Страница Дата и время</a></p>
+    </li>
+    <li>
+    <a href = "/bootstrap">Тест Бутстрапа</a>
+    </li>
+    <li>
+    <a href = "/search">Поиск книг</a>
+    </li>
+    <li>
+    <a href = "/calc">Калькулятор</a>
+    </li>
+    </ul>
+    </nav>
     {% block content %}{% endblock %}
     {% block footer %}
     <hr>
     <p>Спасибо, что посетили мой сайт.</p>
     {% endblock %}
+    </div>
 </body>
 </html>
