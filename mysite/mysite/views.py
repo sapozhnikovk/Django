@@ -86,7 +86,17 @@ def calc(request):
         c = 'Над введенными вами данными нельзя производить математические операции'
     return render_to_response('calc.html', locals())
 
-
+def rss(request):
+    #   error = False
+    if 'q' in request.GET:
+        q = request.GET['q']
+        if not q:
+            error = True
+        else:
+            search_result = True
+            books = Book.objects.filter(title__icontains=q)
+            render_to_response('search_form.html', locals())
+    return render_to_response('search_form.html', locals())
 """
 def calc(request):
     if 'q' in request.GET:

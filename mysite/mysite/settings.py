@@ -64,6 +64,7 @@ TEMPLATES = [
             '/home/sapozhnikovk/PycharmProjects/Django/mysite/Templates',
             'C:\\Users\\nastya\\PycharmProjects\\Django\\mysite\\Templates',
             'C:\\pycharm\\Django\\mysite\\Templates',
+            'C:\\Users\\adm\\PycharmProjects\\Django\\mysite\\Templates'
         ],
         'APP_DIRS': True,
         'OPTIONS': {

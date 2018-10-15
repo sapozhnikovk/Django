@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^meta/$', views.display_meta),
    # url(r'^search-form/$', books.views.search_form),
     url(r'^search/$',  books.views.search),
+    url(r'^rss/$',  views.rss),
     #url(r'^game/$', game.views.start)
 
 ]
